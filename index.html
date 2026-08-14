@@ -47,6 +47,7 @@
             margin-bottom: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: auto; /* Limpia el float de las imágenes */
         }
 
         .card h2 {
@@ -54,6 +55,26 @@
             margin-bottom: 1rem;
             border-bottom: 2px solid #caf0f8;
             padding-bottom: 0.5rem;
+        }
+
+        .img-left {
+            float: left;
+            margin-right: 1.5rem;
+            margin-bottom: 1rem;
+            max-width: 280px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .img-right {
+            float: right;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            max-width: 280px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         ul {
@@ -85,6 +106,16 @@
             color: white;
             margin-top: 3rem;
         }
+
+        /* Ajuste para pantallas pequeñas / celulares */
+        @media (max-width: 600px) {
+            .img-left, .img-right {
+                float: none;
+                display: block;
+                margin: 0 auto 1.5rem auto;
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -96,14 +127,13 @@
 
     <div class="container"> 
 
-        <img src="Eswin.jpeg" alt= "ImagenRefi1" style="float: left; margin-right: 1.5rem; margin-bottom: 1.5rem; max-width: 45%; border-radius: 8px;">
-      
+        <!-- Imagen Zeer1 a la izquierda del primer bloque -->
         <section class="card">
+            <img src="Zeer1.jpeg" alt="Refrigerador Zeer" class="img-left">
             <h2>¿Qué es el Refrigerador Zeer?</h2>
-            <p>Un refrigerador zeer es un dispositivo de enfriamiento ecológico y económico que funciona sin electricidad, utilizando el principio físico de la evaporación del agua. Consiste en colocar una macetas de barro pequeña dentro de otra más grande, rellenar el espacio entre ambas con arena húmeda y cubrir la parte superior con un paño húmedo.</p>
+            <p>Un refrigerador zeer es un dispositivo de enfriamiento ecológico y económico que funciona sin electricidad, utilizando el principio físico de la evaporación del agua. Consiste en colocar una maceta de barro pequeña dentro de otra más grande, rellenar el espacio entre ambas con arena húmeda y cubrir la parte superior con un paño húmedo.</p>
         </section>
 
-       
         <section class="card">
             <h2>¿Cómo Funciona?</h2>
             <div class="grid">
@@ -122,7 +152,6 @@
             </div>
         </section>
 
-     
         <section class="card">
             <h2>Materiales Utilizados</h2>
             <ul>
@@ -133,19 +162,18 @@
             </ul>
         </section>
 
-       
+        <!-- Imagen Eswin a la derecha del bloque de equipo -->
         <section class="card">
+            <img src="Eswin.jpeg" alt="Equipo de Trabajo" class="img-right">
             <h2>Equipo de Trabajo</h2>
             <p>Hugo Aldair Nuñez Moreno<br>
             Francisco Javier Rivera Martinez<br>
             Hector Gerardo Aguilera Magaña<br>
             Alexis Arturo Arana Grijalva<br>
-            Digo Alejandro Alfaro Aguilar</p>
-
-                
-            
-            
+            Diego Alejandro Alfaro Aguilar</p>
         </section>
+
+    </div>
 
 </body>
 </html>
